@@ -1,7 +1,7 @@
 #define BLYNK_PRINT Serial
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
-char auth[] = "1c777027bb32498c92ffbaca882f5688";
+#include <ESP8266WiFi.h> // It provides ESP8266 specific Wi-Fi routines that we are calling to connect to the network.
+#include <BlynkSimpleEsp8266.h> // It handles all the connection routines and data exchange between hardware, Blynk Cloud, and app.
+char auth[] = "1c777027bb32498c92ffbaca882f5688"; // Device Authentication Token to get the hardware online and connect it to Blynk Cloud
 const int sensorPin = 00;
 int sensorState = 0;
 int lastState = 0;
@@ -13,7 +13,7 @@ const int bluePin = 14;
 void setup()
 {
 Serial.begin(9600);
-Blynk.begin(auth, "INTEX", "77777777");
+Blynk.begin(auth, "INTEX", "77777777"); // "INTEX" and "77777777" are the Service Set IDentifier and Password of the Access Point respectively.
 pinMode(sensorPin, INPUT);
 }
 void loop()
