@@ -1,6 +1,6 @@
-#define BLYNK_PRINT Serial
-#include <ESP8266WiFi.h> // It provides ESP8266 specific Wi-Fi routines that we are calling to connect to the network.
-#include <BlynkSimpleEsp8266.h> // It handles all the connection routines and data exchange between hardware, Blynk Cloud, and app.
+#define BLYNK_PRINT Serial // Defines the object that is used for printing
+#include <ESP8266WiFi.h> // It provides ESP8266 specific Wi-Fi routines that we are calling to connect to the network
+#include <BlynkSimpleEsp8266.h> // It handles all the connection routines and data exchange between hardware, Blynk Cloud, and Blynk app
 char auth[] = "1c777027bb32498c92ffbaca882f5688"; // Device Authentication Token to get the hardware online and connect it to Blynk Cloud
 const int sensorPin = 00; // connect digital output pin D0 of Moisture Sensor to pin D3 of NodeMCU development board, which connects to GPIO 00 of ESP8266 microcontroller
 int sensorState = 0;
